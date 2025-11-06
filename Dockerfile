@@ -22,7 +22,7 @@ WORKDIR /app
 RUN apk --no-cache add ca-certificates python3 py3-pip ffmpeg tzdata libc6-compat deno
 
 RUN chmod 777 /usr/local/bin
-COPY --from=builder /usr/bin/yt-dlp /usr/local/bin/youtube-dl
+COPY --from=builder /usr/bin/yt-dlp /usr/local/bin/yt-dlp
 COPY --from=builder /build/bin/podsync /app/podsync
 COPY --from=builder /build/html/index.html /app/html/index.html
 

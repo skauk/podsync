@@ -36,7 +36,7 @@ type Config struct {
 	Clean *Cleanup `toml:"clean"`
 	// Custom is a list of feed customizations
 	Custom Custom `toml:"custom"`
-	// List of additional youtube-dl arguments passed at download time
+	// List of additional yt-dlp arguments passed at download time
 	YouTubeDLArgs []string `toml:"youtube_dl_args"`
 	// Post episode download hooks - executed after each episode is successfully downloaded
 	// Multiple hooks can be configured and will execute in sequence

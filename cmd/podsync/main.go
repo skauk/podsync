@@ -109,7 +109,7 @@ func main() {
 
 	downloader, err := ytdl.New(ctx, cfg.Downloader)
 	if err != nil {
-		log.WithError(err).Fatal("youtube-dl error")
+		log.WithError(err).Fatal("yt-dlp error")
 	}
 
 	database, err := db.NewBadger(&cfg.Database)

@@ -18,14 +18,14 @@ Podsync is a Go-based service that converts YouTube, Vimeo, and SoundCloud chann
 - **db/**: BadgerDB-based storage for metadata and state
 - **fs/**: Storage abstraction supporting local filesystem and S3-compatible storage
 - **model/**: Core data structures and domain models
-- **ytdl/**: YouTube-dl wrapper for media downloading
+- **ytdl/**: yt-dlp wrapper for media downloading
 
 ### Services (`services/`)
 - **update/**: Feed update orchestration and scheduling
 - **web/**: HTTP server for serving podcast feeds and media files
 
 ### Key Dependencies
-- youtube-dl/yt-dlp for media downloading
+- yt-dlp/yt-dlp for media downloading
 - BadgerDB for local storage
 - go-toml for configuration
 - robfig/cron for scheduling
@@ -76,7 +76,7 @@ The application uses TOML configuration files. See `config.toml.example` for all
 - `[storage]`: Local or S3 storage configuration  
 - `[tokens]`: API keys for YouTube/Vimeo
 - `[feeds]`: Feed definitions with URLs and settings
-- `[downloader]`: youtube-dl configuration
+- `[downloader]`: yt-dlp configuration
 
 ## Development Guidelines
 
